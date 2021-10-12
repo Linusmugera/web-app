@@ -1,0 +1,159 @@
+*{
+	margin:0%;
+	padding: 0%;
+    font-family: sans-serif;
+}
+.flex-container{
+	background-color: #f1f2f6;
+}
+a{
+	color: white;
+	text-decoration: none;
+	padding: 2%;
+	line-height: 2;
+	
+}
+a:hover {
+	color: #dcdde1;
+  }
+.menu{
+	text-align: center;
+	margin: 0%;
+	padding: 2%;
+	border: 1px solid black;
+}
+.welcome-msq{
+	text-align: center;
+	text-transform: uppercase;
+	transition: all 4s ease-in-out;
+	color: white;
+	font-size: 30px;
+	background-color: #2ed573;
+	
+}
+.bg{
+	background-color: #2ed573;
+}
+.image{
+	align-items: center;
+	margin-left: 10%;
+}
+.wel-body{
+	background-color: white;
+	width: 700px;
+}
+.wel-text{
+	width: 100%;
+	padding: 3%;
+	margin: 3%;
+}
+.row{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	
+	
+}
+.column-1{
+	display: flex;
+	flex-direction:column;
+	flex-wrap: wrap;
+	width: 25%;
+	font-size: 18px;
+	margin: 0%;
+	overflow: auto;
+	
+}
+.column-2{
+	display: flex;
+	flex-direction:column;
+	width: 75%;
+	margin: 0%;
+	overflow: auto;
+	
+	
+}
+.column-one{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 4%;
+	margin: 0%;
+
+}
+.column-one h2{
+	font-weight: bold;
+	color: #2ed573;
+}
+.column-two{
+	display: flex;
+	flex-direction: column;
+	margin: 0%;
+
+}
+#content, html, body {
+    height: 100%;
+}
+#left {
+    float: left;
+    width: 25%;
+    background: #dcdde1;
+    height: 100%;
+    overflow: auto;
+	-webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+}
+#center {
+	float: left;
+    width: 50%;
+    background: #f5f6fa;
+    overflow: auto;
+	height: 100%;
+	-webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+}
+#right {
+    float: left;
+    width: 25%;
+    background: #dcdde1;
+    height: 100%;
+    overflow: auto;
+	-webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+}
+table{
+	border-collapse: separate;
+	border-spacing: 5px;
+	padding: 2%;
+	width: 100%;
+}
+
+table tr td{
+	padding: 2%;
+
+}
+
+.comment{
+	text-align: center;
+	padding: 2%;
+	border: 1px solid black;
+}
+.footer{
+	text-align: center;
+	padding: 2%;
+	border: 1px solid black;
+}
+.a-web{
+	color: blue;
+	float: right;
+	padding: 2%;
+	text-decoration: none;
+}
+.header{
+	text-align: center;
+	padding: 2%;
+}
+.image{
+	align-items: center;
+	padding: 2%;
+}
