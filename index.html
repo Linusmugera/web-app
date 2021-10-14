@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootsrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
     <link rel="stylesheet" href="css/index.css">
     <!-- Vue JS -->
 <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js'></script>
@@ -12,7 +17,9 @@
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
 <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     
-    <title>Document</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+</script>    
+<title>Document</title>
 </head>
 <body>
     
@@ -23,7 +30,7 @@
 
         <div class="flex-container">
             <div class="row">
-                <div class="column-1">
+                <div class="column-1" id="left">
                     <div class="column-one">
                        <table>
                            <tr>
@@ -44,9 +51,8 @@
                        </table>
                     </div>
                 </div>
-                <div class="column-2" >
-                    <div class="column-two" id="rightt">
-                       <div>
+                <div class="column-2"id="center" >
+                    <div class="column-two" >
                            <div class="wel-body">
                                 <div class="image">
                                      <img src="welcome.png" style="width:100%;height:246px;">
@@ -77,80 +83,46 @@
 
                              </div>
                     </div>
-                        <table border="1">
-                           <tr>
-                               <th scope="col" style="font-size:20px ;">ClUB MEMBERS</th>
-                           </tr>
-                           <tr>
-                               <th scope="col">NAMES</th>
-                               <th scope="col">EMAIL</th> 
-                           </tr>
-                           <tr>
-                               <td> John Kimiti  </td>
-                               <td> john@gmail.com </td>
-                           </tr>
-                           <tr>
-                               <td></td>
-                               <td></td>
-                           </tr>
-                           <tr>
-                               <td></td>
-                               <td></td>
-                           </tr>
-                           <tr>
-                               <td></td>
-                               <td></td>
-                           </tr>
-                           <tr>
-                            <th scope="col" style="font-size:20px ;">SUPERVISORS</th>
-                        </tr>
-                        <tr>
-                            <th scope="col">NAMES</th>
-                            <th scope="col">EMAIL</th> 
-                        </tr>
-                        <tr>
-                            <td> John Kimiti  </td>
-                            <td> john@gmail.com </td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        
-                        <tr>
-                            <th scope="col" style="font-size:20px ;">ACTIVITIES</th>
-                        </tr>
-                        <tr>
-                            <th scope="col">ACTIVITY</th>
-                            <th scope="col">DATE</th> 
-                        </tr>
-                        <tr>
-                            <td> Visit a Net co. </td>
-                            <td> 11/12/2021 </td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        
-                            </table>
-                       </div>
+                       
+                    <div class="comment">
+                        <!--Comment Section appears here-->
+                         <section id="app">
+                             <div class="container">
+                               <div class="row">
+                                 <div class="col-6">
+                                   <div class="comment">
+                                 <p v-for="items in item" v-text="items"></p>
+                                   </div><!--End Comment-->
+                                   </div><!--End col -->
+                                   </div><!-- End row -->
+                               <div class="row">
+                                 <div class="col-6">
+                               <textarea type="text" class="input" placeholder="Write a comment" v-model="newItem" @keyup.enter="addItem()"></textarea>
+                                   <button v-on:click="addItem()" class='primaryContained float-right' type="submit">Add Comment</button>
+                                 </div><!-- End col -->
+                               </div><!--End Row -->
+                             </div><!--End Container -->
+                           </section><!-- end App -->
+             
+                     </div>
+             
+                     <div class="footer">
+                       <!--  Footer section appears here-->
+                         <div class="footer-basic">
+                             <footer>
+                                
+                                 <ul class="list-inline">
+                                     <li class="list-inline-item"><a href="#">Home</a></li>
+                                     <li class="list-inline-item"><a href="#">Services</a></li>
+                                     <li class="list-inline-item"><a href="#">About</a></li>
+                                     <li class="list-inline-item"><a href="#">Terms</a></li>
+                                 </ul>
+                                 <p class="copyright">TEAU ICT CLUB © 2021</p>
+                             </footer>
+                         </div>
+                         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+                         <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+                         </div>
 
 
                             
@@ -160,21 +132,115 @@
 
                 </div>
                 
+                <div id="right">
+                    
+                    <section class="team">
+                        <div class="container-team">
+                                <h5>OUR TEAM</h1>
+                             <div class="row">
+                                <div class="col-md-3">
+                                    <div class="img-box">
+                                        <img src="linus.jpg" alt="" class="img-responsive">
+                                        <div class="row-md-3">
+                                            <h2>LinusMugera</h2>
+                                            <h3>Developer</h3>
+                                            </div>
+                                    </div>
+                                    
+                                </div>
 
+                                <div class="col-md-3">
+                                    <div class="img-box">
+                                        <img src="" alt="" class="img-responsive">
+                                      
+                                    </div>
+                                    <div class="row-md-3">
+                                    <h2>KemiMsabeni</h2>
+                                    <h3>Developer</h3>
+                                    </div>
+                                </div>  <div class="col-md-3">
+                                    <div class="img-box">
+                                        <img src="" alt="" class="img-responsive">
+                                      
+                                    </div>
+                                    <div class="row-md-3">
+                                    <h2>Chalie</h2>
+                                    <h3>Developer</h3>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="img-box">
+                                        <img src="" alt="" class="img-responsive">
+                                      
+                                    </div>
+                                    <div class="row-md-3">
+                                    <h2>Muriithi Gakuru</h2>
+                                    <h3>Developer</h3>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="img-box">
+                                        <img src="" alt="" class="img-responsive">
+                                      
+                                    </div>
+                                    <div class="row-md-3">
+                                    <h2>DanielCrispa</h2>
+                                    <h3>Developer</h3>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="img-box">
+                                        <img src="" alt="" class="img-responsive">
+                                      
+                                    </div>
+                                    <div class="row-md-3">
+                                    <h2>JohnKimiti</h2>
+                                    <h3>Developer</h3>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="img-box">
+                                        <img src="" alt="" class="img-responsive">
+                                      
+                                    </div>
+                                    <div class="row-md-3">
+                                    <h2>Mike</h2>
+                                    <h3>Developer</h3>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="img-box">
+                                        <img src="" alt="" class="img-responsive">
+                                      
+                                    </div>
+                                    <div class="row-md-3">
+                                    <h2>Purity Nanjimars</h2>
+                                    <h3>Developer</h3>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="img-box">
+                                        <img src="" alt="" class="img-responsive">
+                                      
+                                    </div>
+                                    <div class="row-md-3">
+                                    <h2>VeronicaBironga</h2>
+                                    <h3>Developer</h3>
+                                    </div>
+                                </div>
+
+                             </div>       
+                        </div>
+                    </section>
+                </div>
             </div>
 
         </div>
+       
 
-        <div class="comment">
-            Comment Section appears here
-
-        </div>
-
-        <div class="footer">
-            Footer section appears here
-
-        </div>
-
+  
+            <script src="index.js"></script>
+        
 
     
     
